@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+    <title>Zeta-1</title>
+    <style>
+        body{
+            margin-left:5%;
+        }
+        .container{
+            margin: 0;
+            background-image: url(img/pg1-eng.jpg);
+            height: 1200px;
+        }
+        .wrapper{ opacity:0.8;height:1300px;width: 550px; margin: 50px auto; padding: 20px; background: #f5eca8; -moz-box-shadow: 0 0 20px black; -webkit-box-shadow: 0 0 20px black; box-shadow: 0 0 20px black; }
+
+
+        /*content*/
+        a{
+            text-decoration: none;
+    color:rgb(240, 240, 240);
+}
+a:hover{
+    color:chartreuse;
+    text-decoration: none;
+}
+
+
+
+li{
+    text-align: left;
+}
+
+.hd{
+    display: none;
+}
+
+
+
+img{
+    height:250px;
+    margin-top: 10px;
+    padding-top: 20px;
+}
+
+a:hover{
+    color: rgb(2, 85, 16);
+    /* font-size:large; */
+}
+
+.name:hover +.hd {
+    height: min-content;
+    display: grid;
+}
+.cursive{
+    color: black;
+    font-weight: 600;
+    /* font-family: 'Kaushan Script', cursive; */
+    font-family: 'Nothing You Could Do', cursive;
+    font-size: 25px;
+}
+.cursive1{
+    color: black;
+    font-weight: 700;
+    font-family: 'Kaushan Script', cursive; 
+    /* font-family: 'Nothing You Could Do', cursive; */
+    font-size: 25px;
+}
+
+.hd{
+    display: none;
+}
+.open_button:hover +.hd{
+    height: min-content;
+    display: grid;
+ 
+}    
+.normal{
+    font-size:22px;
+    color: black;
+    font-weight: 600;
+    font-family: serif;
+
+}
+.red{
+    color: red;
+}
+
+.green{
+    color: rgb(2, 85, 16);
+}
+.blue{
+    color:#0F044C;
+}
+.options{
+    color: #99154E;
+}
+h1{
+    border-bottom:1px solid black;
+    color: rgb(194, 166, 11);
+    font-family: Georgia;
+    text-align: center;
+}
+.ta{
+    /* background-color: #04009A; */
+    background-color: #F21170;
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 10px;
+}
+</style>
+</head>
+
+<body>
+    <div class="container"> <!--background image-->
+        <div class="wrapper"><!--text box semi transparent-->
+            <h1>Congratulations!!!</h1>
+            <h3 class="cursive blue">You have just graduated from your college and ready solve real life problems using your skills. </h3> <br>
+            <h3 class="cursive">
+                Scientists study the world as it is; engineers create the world that has never been.
+            </h3><br>
+            <h3 class="cursive1"> You  start your new phase of life with full enthusiasm..</h3><br>
+            <h3 class="normal">
+                <ul>            
+                <div class="open_button cursive green">Here are your income details</div>            
+                    <div class="hd">                        
+                        <li>Basic &nbsp &nbsp +Rs 45000 </li>
+                        <li>HRA &nbsp &nbsp +Rs 5000</li>
+                        <li>DA &nbsp &nbsp +Rs 1000</li>
+                        <!-- <li>Providend Fund &nbsp -Rs 5000</li> -->
+                        <!-- <li>Professional Tax &nbsp -Rs 4500</li> -->
+                        <!-- <li>Loan &nbsp&nbsp Rs 000</li>  -->
+                        <li>Total &nbsp&nbsp Rs 51000</li>                   
+                    </div> 
+                    </ul>
+            </h3>   <br>
+            <h3 class="cursive1">You have many plans and goals for yourself and your family but you have monthly expenses
+                as well</h3> <br>
+            <ul><h3 class="normal">                
+            <div class="open_button cursive red">Here is the list of your monthly expenses</div>
+            <div class="hd">                        
+                <!-- <li>Basic &nbsp &nbsp +Rs 45000 </li> -->
+                <!-- <li>HRA &nbsp &nbsp +Rs 5000</li> -->
+                <li>Providend Fund &nbsp -Rs 5000</li>
+                <li>Professional Tax &nbsp -Rs 4500</li>
+                <li>Loan &nbsp&nbsp Rs -10,000</li> 
+                <li>Other expenses &nbsp &nbsp -Rs 6,500</li>
+                <li>Total &nbsp&nbsp Rs 25,000</li>                   
+            </div></h3> 
+            </ul>  <br>
+            <h3 class="cursive1 green">Overall you have Rs 15000-20000 in your hands, but you are confused as to how you should invest it</h3>        
+            <br><ul><h3 class="normal">                
+                <div class=" cursive">Here are the following options</div>
+                <div class="">                        
+                    <li>Stocks </li>
+                    <li>Mutual Funds</li>
+                    <li>Fixed Deposits</li>
+                    <li>Recurring Deposits</li>
+                    <li>Gold</li>
+                    <li>Bank balance and in stocks</li> 
+                    <li>I would borrow some money to buy a bike for myself</li>                   
+                </div></h3> 
+                </ul>
+
+                <div class="text-center ">
+                    <h3 class="normal options">
+                    <button type="button" class="ta open_button btn btn-dark"><a href="Investment.html#inv-opt">Take Advice</a></button>
+                        <div class="hd">                        
+                            <li>What are Stocks and Stock Market? </li>
+                            <li>What are Mutual Funds?</li>
+                            <li>What are Fixed Deposits?</li>
+                            <li>What are Recurring Deposits?</li>
+                            <li>Investing in Gold</li>            
+                        </div>
+                    </h3> 
+                </div><br><br>
+                <div class="text-center ">
+                <button type="button" class="btn btn-dark"><a href="pg2.html">NEXT</a></button>
+                </div>
+
+        </div>
+    </div>
+    
+</body>
+</html>

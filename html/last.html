@@ -1,0 +1,192 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+    <title>Zeta-6</title>
+    <style>
+        /*-------------------------------------------------------------------*/
+.loader {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader > img {
+    width: 100px;
+}
+
+.loader.hidden {
+    animation: fadeOut 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.thumb {
+    height: 100px;
+    border: 1px solid black;
+    margin: 10px;
+}
+        
+        body{
+            margin-left:5%;
+            display: flex;
+            justify-content: center;
+        }
+        .container{
+            margin: 0;
+            background-image: url("{% static 'img/img-6.png' %}");
+            background-repeat: no-repeat;
+            height: 1200px;
+        }
+        .wrapper{ opacity:0.6;height:max-content;width: 550px; margin: 50px auto; padding: 20px; background: #f5eca8; -moz-box-shadow: 0 0 20px black; -webkit-box-shadow: 0 0 20px black; box-shadow: 0 0 20px black; }
+
+
+        /*content*/
+        a{
+            text-decoration: none;
+    color:rgb(240, 240, 240);
+}
+a:hover{
+    color:chartreuse;
+    text-decoration: none;
+}
+
+
+
+li{
+    text-align: left;
+}
+
+.hd{
+    display: none;
+}
+
+
+
+img{
+    height:250px;
+    margin-top: 10px;
+    padding-top: 20px;
+}
+
+a:hover{
+    color: rgb(2, 85, 16);
+    /* font-size:large; */
+}
+
+.name:hover +.hd {
+    height: min-content;
+    display: grid;
+}
+.cursive{
+    color: black;
+    font-weight: 600;
+    /* font-family: 'Kaushan Script', cursive; */
+    font-family: 'Nothing You Could Do', cursive;
+    font-size: 25px;
+}
+.cursive1{
+    color: black;
+    font-weight: 700;
+    font-family: 'Kaushan Script', cursive; 
+    /* font-family: 'Nothing You Could Do', cursive; */
+    font-size: 25px;
+}
+
+.hd{
+    display: none;
+}
+.open_button:hover +.hd{
+    height: min-content;
+    display: grid;
+ 
+}    
+.normal{
+    font-size:22px;
+    color: black;
+    font-weight: 600;
+    font-family: serif;
+
+}
+.red{
+    color: red;
+}
+
+.green{
+    color: rgb(2, 85, 16);
+}
+.blue{
+    color:#0F044C;
+}
+.options{
+    color: #99154E;
+}
+h1{
+    border-bottom:1px solid black;
+    color: rgb(194, 166, 11);
+    font-family: Georgia;
+    text-align: center;
+}
+.ta{
+    /* background-color: #04009A; */
+    background-color: #F21170;
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 10px;
+}
+</style>
+</head>
+
+<body>
+    <div class="container"> <!--background image-->
+        <div class="wrapper"><!--text box semi transparent-->
+            <h1>In the End!!!</h1>
+            <h3 class="cursive1">Depending upon the types of investments and situations this is how your networth would be</h3>
+            <h3 class="cursive1 name green">Favourable Situation with your stocks and other investments gaining every year. </h3>
+            <h3 class="hd"><ul class="normal"><li>80 lacs to 1 Crore with monthly investment around 40k-45k</li>
+            <li>60 lacs to 80 lacs with monthly investment around 30k-40k</li> 
+            <li>40 lacs to 60 lacs with monthly investment around 25k-35k</li>    
+            </ul></h3><br>
+            <h3 class="cursive1 name blue">Favourable Situation with your stocks and other investments gaining almost every year </h3>
+            <h3 class="hd"><ul class="normal"><li>60 lacs to 80lacs with monthly investment around 40k-45k</li>
+            <li>60 lacs to 80 lacs with monthly investment around 30k-40k</li> 
+            <li>40 lacs to 60 lacs with monthly investment around 25k-35k</li>    
+            </ul></h3>
+            <h3 class="cursive1 name red">Unfavourable Situation with your stocks and other investments gaining and losing </h3>
+            <h3 class="hd cursive1">In this you can always withdraw or check with various financial experts, market trends or simply gaining knowledge can also help.
+            </ul></h3>
+            <br><br>
+            <h3 class="cursive blue">With so much of money in investments. You can definitely fulfill your dreams of buying a house or setting up a business and think of your retirement plans.</h3>
+            <br>
+            <h3 class="cursive ">Hope you loved the application and support it. More features are to be added in this..Till then Thank you ..</h3>
+
+        </div>
+        
+        
+    </div>
+    
+</body>
+</html>
+
+

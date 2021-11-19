@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wd-container {
+            width: 500px;
+            margin: 50px auto;
+            padding: 50px;
+            text-align: center;
+            background-color: rgb(108, 183, 218);
+            border: 2px solid black;
+            border-radius: 20px;
+        }
+
+        
+        form input{
+            margin: 5px;
+            border-radius: 5px;
+        }
+
+        #note{
+            color: wheat;
+        }
+
+        #bank-bal{
+            color: rgb(235, 110, 27);
+            font-size: 30px;
+        }
+
+        #submit{
+            color: floralwhite;
+            font-size: 15px;
+            margin-top: 20px;
+            padding: 5px;
+            background-color:rgb(226, 19, 64);
+        }
+
+        #submit:hover{
+            background-color: rgb(34, 178, 65);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wd-container">
+        <h3 id="note">Note: Withdraw amount is added to your bank balance</h3>
+        <h3 id="bank-bal">Current Bank Balance:{{prtf.balance}} </h3>
+        <div class="wd-entries">
+            <form action="confirm_wd" method="POST">
+                {% csrf_token %}
+                <label for="stocks">Stocks: </label><input type="number" name="stocks" max="{{prtf.stocks}}" value=0>
+                (Available Stocks amt:{{prtf.stocks}})<br>
+                <label for="mutual funds">Mutual Funds: </label><input type="number" name="mutual_funds"
+                    max="{{prtf.mutual_funds}}" value=0> (Available Mutual funds amt:{{prtf.mutual_funds}})<br>
+                <label for="fds">Fixed Deposists: </label><input type="number" name="fds" max="{{prtf.fds}}" value=0>
+                (Available Fixed Deposits amt:{{prtf.fds}})<br>
+                <label for="gold">Gold: </label><input type="number" name="gold" max="{{prtf.gold}}" value=0> (Available
+                Gold amt:{{prtf.gold}})<br>
+                <input type="submit" value="Confirm Withdraw" id="submit">
+                <!-- <a href="start/prof_ch"><h2>{{prof.prof_name}}</h2></a> -->
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

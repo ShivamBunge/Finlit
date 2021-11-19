@@ -1,0 +1,289 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="{% static 'jscript.js' %}"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Nothing+You+Could+Do&display=swap"
+        rel="stylesheet">
+    <title>Zeta-5</title>
+    <style>
+        /*-------------------------------------------------------------------*/
+        .loader {
+            position: fixed;
+            z-index: 99;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loader>img {
+            width: 100px;
+        }
+
+        .loader.hidden {
+            animation: fadeOut 4s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeOut {
+            100% {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+        .thumb {
+            height: 100px;
+            border: 1px solid black;
+            margin: 10px;
+        }
+
+        body {
+            margin-left: 5%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            margin: 0px 0px;
+            background-image: url("{% static 'img/crash.jpg' %}");
+            height: 100%;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        .wrapper {
+            opacity: 0.8;
+            height: max-content;
+            width: 550px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5eca8;
+            -moz-box-shadow: 0 0 20px black;
+            -webkit-box-shadow: 0 0 20px black;
+            box-shadow: 0 0 20px black;
+        }
+
+
+        /*content*/
+        a {
+            text-decoration: none;
+            color: rgb(240, 240, 240);
+        }
+
+        a:hover {
+            color: chartreuse;
+            text-decoration: none;
+        }
+
+
+
+        li {
+            text-align: left;
+        }
+
+        .hd {
+            display: none;
+        }
+
+
+
+        img {
+            height: 250px;
+            margin-top: 10px;
+            padding-top: 20px;
+        }
+
+        a:hover {
+            color: rgb(2, 85, 16);
+            /* font-size:large; */
+        }
+
+        .name:hover+.hd {
+            height: min-content;
+            display: grid;
+        }
+
+        .cursive {
+            color: black;
+            font-weight: 600;
+            /* font-family: 'Kaushan Script', cursive; */
+            font-family: 'Nothing You Could Do', cursive;
+            font-size: 25px;
+        }
+
+        .cursive1 {
+            color: black;
+            font-weight: 700;
+            font-family: 'Kaushan Script', cursive;
+            /* font-family: 'Nothing You Could Do', cursive; */
+            font-size: 25px;
+        }
+
+        .hd {
+            display: none;
+        }
+
+        .open_button:hover+.hd {
+            height: min-content;
+            display: grid;
+
+        }
+
+        .normal {
+            font-size: 22px;
+            color: black;
+            font-weight: 600;
+            font-family: serif;
+
+        }
+
+        .red {
+            color: red;
+        }
+
+        .green {
+            color: rgb(2, 85, 16);
+        }
+
+        .blue {
+            color: #0F044C;
+        }
+
+        .options {
+            color: #99154E;
+        }
+
+        h1 {
+            border-bottom: 1px solid black;
+            color: rgb(194, 166, 11);
+            font-family: Georgia;
+            text-align: center;
+        }
+
+        .ta {
+            /* background-color: #04009A; */
+            background-color: #F21170;
+            font-size: 20px;
+            padding: 8px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loader">
+        <div class="cursive">After 1 year..Inflation rate for the year was 7%</div>
+    </div>
+    <div class="container">
+        <!--background image-->
+        <div class="wrapper">
+            <!--text box semi transparent-->
+            <h1>Dealing with negatives.</h1>
+            <h3 class="cursive blue">Everything was going good, salary got incremented as well. Your expenses also
+                increases.</h3> <br>
+            <h2 class="cursive1 blue">But with the phase of covid-19 pandemic within a matter of few months entire world
+                got changed and of course your investments as
+                well.</h2> <br>
+            <h3 class="cursive">
+                Hope is being able to see that there is light despite all of the darkness.
+            </h3><br>
+            <h3 class="normal">
+                <ul>
+                    <div class="open_button cursive green">Here is detailed report of your investments:</div>
+                    <div class="hd">
+                        <li>Stocks {{prtf.stocks}} (-25%) </li>
+                        <li>Mutual Funds {{prtf.mutual_funds}} (-27%)</li>
+                        <li>Gold funds {{prtf.gold}} (+5%)</li>
+                        <li>Bank FD's {{prtf.fds}} (3.5%)</li>
+                        <!-- <li>Professional Tax &nbsp -Rs 4500</li> -->
+                        <!-- <li>Loan &nbsp&nbsp Rs 000</li>  -->
+                        <!-- <li>Total &nbsp&nbsp Rs 51000</li>                    -->
+                    </div> <br>
+
+                </ul>
+            </h3> <br>
+            <h3 class="cursive1">Your investments face a sudden loss of approx 25%. Your are scared, you start worrying!
+            </h3> <br>
+
+            <h3 class="normal">
+                <ul>
+                    <div class="open_button cursive blue">You have 2 options now:</div>
+                    <div class="hd">
+                        <li>Withdraw money and avoid further loss.</li><br>
+                        <li>invest more and stay calm by focusing on future.</li>
+                    </div> <br>
+
+                </ul>
+            </h3> <br>
+            <h3 class="cursive options">What to do? </h3>
+            <div class="text-center ">
+
+
+                <button type="button" class="ta open_button btn btn-dark"><a href="Investment.html#add">Learn about
+                        Market Crash</a></button>
+
+
+            </div><br>
+
+            <h2 class="normal">So, you plan to buy more of your favourite stocks keeping in mind the fundamentals and
+                strong balance sheet of company.</h2><br>
+
+            <div class="text-center ">
+
+
+                <form action="advice" method="POST">
+                    {% csrf_token %}
+                    <input type="submit" value="advice" name="advice">
+                </form>
+
+                <button type="button" class="ta open_button btn btn-dark"><a
+                        href="https://www.investopedia.com/fundamental-analysis-4689757">What is Fundamental
+                        Analysis?</a></button>
+                <div class="hd cursive">
+                    Fundamental Analysis is the art of evaluating the intrinsic value of a stock to find long-term
+                    investing opportunities
+                </div>
+
+            </div><br>
+            {% for save in mon_save %}
+                <h3 class="cursive1 green">This year on monthly basis you save {{save}}.</h3>
+            {% endfor %}
+            <br>
+
+            <div class="text-center">
+                <form action="withdraw" method="POST">
+                    {% csrf_token %}
+                    <input type="submit" value="Withdraw" name="withdraw">
+                </form>
+            </div>
+
+            <div class="text-center">
+                <form action="invest" method="POST">
+                    {% csrf_token %}
+                    <input type="submit" value="Invest" name="invest">
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

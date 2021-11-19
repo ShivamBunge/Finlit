@@ -1,0 +1,237 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="{% static 'jscript.js' %}"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+    <title>Zeta-6</title>
+    <style>
+        /*-------------------------------------------------------------------*/
+.loader {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader > img {
+    width: 100px;
+}
+
+.loader.hidden {
+    animation: fadeOut 4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.thumb {
+    height: 100px;
+    border: 1px solid black;
+    margin: 10px;
+}
+        
+        body{
+            margin-left:5%;
+            display: flex;
+            justify-content: center;
+        }
+        .container{
+            margin: 0;
+            background-image: url("{% static 'img/img3.png' %}");
+            background-repeat: no-repeat;
+            height: 1200px;
+        }
+        .wrapper{ opacity:0.8;height:max-content;width: 550px; margin: 50px auto; padding: 20px; background: #f5eca8; -moz-box-shadow: 0 0 20px black; -webkit-box-shadow: 0 0 20px black; box-shadow: 0 0 20px black; }
+
+
+        /*content*/
+        a{
+            text-decoration: none;
+    color:rgb(240, 240, 240);
+}
+a:hover{
+    color:chartreuse;
+    text-decoration: none;
+}
+
+
+
+li{
+    text-align: left;
+}
+
+.hd{
+    display: none;
+}
+
+
+
+img{
+    height:250px;
+    margin-top: 10px;
+    padding-top: 20px;
+}
+
+a:hover{
+    color: rgb(2, 85, 16);
+    /* font-size:large; */
+}
+
+.name:hover +.hd {
+    height: min-content;
+    display: grid;
+}
+.cursive{
+    color: black;
+    font-weight: 600;
+    /* font-family: 'Kaushan Script', cursive; */
+    font-family: 'Nothing You Could Do', cursive;
+    font-size: 25px;
+}
+.cursive1{
+    color: black;
+    font-weight: 700;
+    font-family: 'Kaushan Script', cursive; 
+    /* font-family: 'Nothing You Could Do', cursive; */
+    font-size: 25px;
+}
+
+.hd{
+    display: none;
+}
+.open_button:hover +.hd{
+    height: min-content;
+    display: grid;
+ 
+}    
+.normal{
+    font-size:22px;
+    color: black;
+    font-weight: 600;
+    font-family: serif;
+
+}
+.red{
+    color: red;
+}
+
+.green{
+    color: rgb(2, 85, 16);
+}
+.blue{
+    color:#0F044C;
+}
+.options{
+    color: #99154E;
+}
+h1{
+    border-bottom:1px solid black;
+    color: rgb(194, 166, 11);
+    font-family: Georgia;
+    text-align: center;
+}
+.ta{
+    /* background-color: #04009A; */
+    background-color: #F21170;
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 10px;
+}
+</style>
+</head>
+
+<body>
+    <div class="loader">
+        <div class="cursive">After 1 year..  Inflation rate for the year was 6%</div>
+    </div>
+    <div class="container"> <!--background image-->
+        <div class="wrapper"><!--text box semi transparent-->
+            <h1>Fabulous Comeback!!!</h1>
+            <h3 class="cursive blue">With the bad years gone, you are delighted as your investments have show rise this year.</h3> <br>
+            <h3 class="cursive">
+                The comeback is always stronger than setback.
+            </h3><br>
+            <h3 class="normal">
+                <ul>            
+                <div class="open_button cursive green">Here is detailed report of your investments portfolio:</div>            
+                    <div class="hd">                        
+                        <li>Stocks {{prtf.stocks}} (+37%) </li>
+                        <li>Mutual {{prtf.mutual_funds}} (+29%)</li>
+                        <li>Gold {{prtf.gold}} (+1%)</li>
+                        <li>Bank FD's {{prtf.fds}} (+5%)</li>
+                        <!-- <li>Professional Tax &nbsp -Rs 4500</li> -->
+                        <!-- <li>Loan &nbsp&nbsp Rs 000</li>  -->
+                        <!-- <li>Total &nbsp&nbsp Rs 51000</li>                    -->
+                    </div> <br>                                    
+                    </ul>
+                    <div class="text-center ">
+                        <h3 class="normal options">
+                        <button type="button" class="ta open_button btn btn-dark"><a href="Investment.html">What is Portfolio?</a></button>
+                        <div class="hd cursive">                        
+                            A portfolio is a collection of financial investments like stocks, bonds, commodities, cash, and cash equivalents, including closed-end funds
+                        </div>
+                    </h3> 
+                    </div>
+                </h3>   <br>
+            {% for save in mon_save %}    
+                <h3 class="cursive1 green">You manage to save {{save}} per month </h3>
+            {% endfor %}
+             <br>
+            <h3 class="cursive1 blue">With enough cash in your bank account and healthy investments, you finally decide to buy a car for yourself without borrowing. You manage the money by selling a part of your stocks.</h3> <br>
+   
+            <ul><h3 class="normal">                
+                <div class=" cursive">Here we come near to conclusion:</div><br> 
+                <div class="">                        
+                    <li>Now you have learned quite a bit about investory, you invest more amount of your monthly balance in assets like stocks and mutual funds.</li><br>
+                    <li>You are confident and are ready to take major decisions for yourself and your financial future.</li>
+                    <!-- <li>Fixed Deposits</li> -->
+                    <!-- <li>Recurring Deposits</li> -->
+                    <!-- <li>Gold</li> -->
+                    <!-- <li>Bank balance and in stocks</li>  -->
+                    <!-- <li>I would borrow some money to buy a bike for myself</li>                    -->
+                </div></h3> 
+                </ul>
+
+                <div class="text-center ">
+                    <h3 class="normal options">
+                    <button type="button" class="ta open_button btn btn-dark"><a href="Investment.html#famous">Famous People</a></button>
+                    </h3> 
+                </div><br><br>
+                <div class="text-center">
+                    <form action="withdraw" method="POST">
+                        {% csrf_token %}
+                        <input type="submit" value="Withdraw" name="withdraw">
+                    </form>
+                </div>
+    
+                <div class="text-center">
+                    <form action="invest" method="POST">
+                        {% csrf_token %}
+                        <input type="submit" value="Invest" name="invest">
+                    </form>
+                </div>
+
+        </div>
+    </div>
+    
+</body>
+</html>

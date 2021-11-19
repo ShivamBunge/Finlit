@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finlit</title>
+    <style>
+        .inv-container {
+            width: 500px;
+            margin: 50px auto;
+            padding: 50px;
+            text-align: center;
+            background-color: rgb(108, 183, 218);
+            border: 2px solid black;
+            border-radius: 20px;
+        }
+        
+        form input{
+            margin: 5px;
+            border-radius: 5px;
+        }
+
+        #note{
+            color: wheat;
+        }
+
+        #bank-bal{
+            color: rgb(235, 110, 27);
+            font-size: 30px;
+        }
+
+        #submit{
+            color: floralwhite;
+            font-size: 15px;
+            margin-top: 20px;
+            padding: 5px;
+            background-color:rgb(226, 19, 64);
+        }
+
+        #submit:hover{
+            background-color: rgb(34, 178, 65);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="inv-container">
+        <h3 id="note">Note: You can invest upto bank balance amount</h3>
+        <h3 id="bank-bal">Current Bank Balance:{{prtf.balance}} </h3>
+        <h3>Enter how much many do you want enter in repective box</h3>
+        <div class="inv-entries">
+            <form action="confirm_inv" method="POST">
+                {% csrf_token %}
+                <label for="stocks">Stocks: </label><input type="number" name="stocks" min=0 max="{{prtf.balacne}}"
+                    value=0>
+                (Current Stocks amt:{{prtf.stocks}})<br>
+                <label for="mutual funds">Mutual Funds: </label><input type="number" name="mutual_funds" min=0
+                    max="{{prtf.balance}}" value=0> (Current Mutual funds amt:{{prtf.mutual_funds}})<br>
+                <label for="fds">Fixed Deposists: </label><input type="number" name="fds" min=0 max="{{prtf.balance}}"
+                    value=0> (Available Fixed Deposits amt:{{prtf.fds}})<br>
+                <label for="gold">Gold: </label><input type="number" name="gold" min=0 max="{{prtf.balance}}" value=0>
+                (Available Gold amt:{{prtf.gold}})<br>
+                <input type="submit" value="Confirm Investment" id="submit">
+                <!-- <a href="start/prof_ch"><h2>{{prof.prof_name}}</h2></a> -->
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

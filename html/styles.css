@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+/*------------home page styling----------------------------------------------*/
+/*pre loading animations*/
+.loader {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.loader.hidden {
+    animation: fadeOut 5s;
+    animation-fill-mode: forwards;
+}
+
+.loader.hidden1 {
+    animation: fadeOut 10s;
+    animation-fill-mode:none;
+}
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/*----------------------------------------------------------*/
+/*carousal and sections*/
+.button1{
+    margin:0px 400px;
+    font-size: 27px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+@media only screen and (max-width : 620px) {
+    .button1{
+        margin:0px 0px;
+    }
+}
+
+.button1:hover{
+    color: white;
+    text-decoration: none;   
+
+}
+.button {
+    background-color: black;
+    color: white;
+    font-size: 20px;;
+    padding: 5px;
+    width: 200px;
+    border-radius: 8px;
+}
+.button1:hover, .button:hover{
+    color:cornsilk;
+    background-color: #480032;
+    text-decoration: none;
+
+}
+.space{
+    height: 30px;
+}
+.carousel-item {
+    height: 65vh;
+    min-height: 630px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover
+}
+
+#mainNavbar {
+    padding-left: 20px;
+    padding-top: 20px
+}
+.container1{
+    margin:5px 100px;
+    background-color:#E5FBB8;
+    color: black;
+    padding: 8px 15px;
+}
+.container2{
+    margin:5px 100px;
+    background-color:#E5FBB8;
+    color: black;
+    padding: 8px 15px;
+}
+
+
+.navbar-dark .navbar-brand {
+    font-family:  serif;
+}
+
+.navbar-nav .nav-link {
+    font-family:  serif;
+}
+
+.display-4 {
+    font-family:  serif;
+    color: black;
+}
+
+.lead {
+    font-family:  serif;
+    font-size: 22px;
+}
+
+.navbar.scrolled {
+    background: rgb(34, 31, 31);
+    transition:ease-in-out 500ms;
+    
+}
+.lead1{
+    font-family:  serif;
+    font-size: 40px;
+}
+body{
+    background-color: #FFF5AB;
+}
+
+.font-weight-light {
+    color:black;
+    font-size:30px;
+    font-family:  serif;
+    font-weight: 900;   
+}
+/*----------------------------------------------------------*/
+
+/* --------------Invest page styling----------------------- */

@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeta</title>
+        <link rel="stylesheet" href="{% static 'styles.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <style>
+</style>
+    </head>
+    <body>
+    <nav id="mainNavbar" class="navbar navbar-dark navbar-expand-md py-0 fixed-top"> <a href="#" class="navbar-brand">FINLIT</a> <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks"> <span class="navbar-toggler-icon"></span> </button>
+        <div class="collapse navbar-collapse" id="navLinks">
+            <ul class="navbar-nav">
+                <li class="nav-item"> <a href="#home" class="nav-link">HOME</a> </li>
+                <li class="nav-item"> <a href="#about" class="nav-link">ABOUT</a> </li>
+                <li class="nav-item"> <a href="#contact" class="nav-link">CONTACT</a> </li>
+                {% if user.is_authenticated %}
+                <li class="nav-item"> <a href="logout" class="nav-link">LOG OUT</a> </li>
+                <li class="nav-link" style="text-decoration:underline">Hello, {{user.username}}</li>
+                {% else %}
+                <li class="nav-item"> <a href="register" class="nav-link">REGISTER</a> </li>
+                <li class="nav-item"> <a href="login" class="nav-link">LOG IN</a> </li>
+                {% endif %}
+        </ul></div>
+    </nav>
+    <header id="home"> 
+        <div id="indicators" class="carousel slide carousel-fade" data-ride="carousel" data-interval="5000">
+            <ol class="carousel-indicators">
+                <li data-target="#indicators" data-slide-to="0" class="active"></li>
+                <li data-target="#indicators" data-slide-to="1" class=""></li>
+                <li data-target="#indicators" data-slide-to="2" class=""></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <!-- Slide One - Set the background image for this slide in the line below -->
+                <div class="carousel-item active" style="background-image: url('{% static 'img/f5.jpg' %}')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3 class="display-4">BUILD YOUR FINANCIAL FUTURE</h3>
+                        <p class="lead1">Check out where you stand after 10 years.</p>
+                    </div>
+                </div> <!-- Slide Two - Set the background image for this slide in the line below -->
+                <div class="carousel-item " style="background-image:url('{% static 'img/f3.jpg' %}')"> 
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3 class="display-4">Apply your knowledge in this Interesting Story</h3>
+                        <p class="lead1">Learn more about Financial Literacy on the way</p>
+                    </div>
+                </div> <!-- Slide Three - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('{% static 'img/f4.jpg' %}')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3 class="display-4">Succeed in your goals </h3>
+                        <p class="lead1">in your real life as well</p>
+                    </div>
+                </div>
+            </div> <a class="carousel-control-prev" href="#indicators" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="carousel-control-next" href="#indicators" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
+        </div>
+
+    
+        <div ><a href="start" class="button1">CLICK TO BEGIN YOUR JOURNEY</a></div>
+    </header>
+    <!-- Page Content -->
+    <section class="py-5">
+        
+        <div class="space"></div>
+        <div class="container1">
+            <h1 class="font-weight-light" id="about"><strong>About</strong></h1>
+            <p class="lead">Finlit is a story based learning amusement app for Financial Literacy .</p>
+            <p class="lead">The web application mainly focuses on various must know concepts for youth between ages 14-25 for Financial Literacy. The user gets to 
+                plays a real life scenario where after getting a job he is aquainted with the real world situations where he has to take decisions ranging from
+                meeting his monthly expenses, saving money for his future, borrowing money to fulfill his goals.    </p>
+            <p class="lead">On the way he is exposed to the complex and yet simple world of finance where, if he takes decisions with the right knowledge, life becomes much
+                simpler for his financial goals else he has to fall in the rat race. There are numerous concepts being covered about finance and income sources and the regular quotes from 
+                from the well-known peeple of this field and books like Rich Dad Poor Dad, keeps the user motivated to earn for the longer term and decide accordingly.</p>
+        <div class="center"><a href="start" class="button">LET'S BEGIN NOW</a> </div>  <!--next page-->
+          <!--pre loading for next page-->
+        </div>
+        <div class="space"></div>
+    
+        <div class="container2" >
+            <h1 class="font-weight-light" id="contact">Get in touch with us</h1>
+            <p class="lead">The webapp is being developed by team Titans. Following are our members.<br><ul class="lead"><li>Shivam Bunge</li><li>Atharva Borawake</li><li>Sanskar Mundra</li></ul></p>
+            <p class="lead">Reach us<br>shivambunge9898@gmail.com<br>borawakeatharva2002@gmail.com</p>
+        </div>
+    </section>
+    <script type="text/javascript">
+        $(document).ready(function() {
+          $('.carousel').carousel({
+            interval: 2000
+          })
+        });
+      </script>			                            
+    <script type="text/javascript"></script>
+    </body>
+</html>
+
+
+
+

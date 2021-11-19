@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    ​<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+​
+
+    <title>About Us</title>
+    <style>
+        .card-deck{
+            margin:50px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+        h5{
+            text-align: center;
+        }
+        img {
+            border-radius: 50%;
+            height: 400px;
+          }
+        @media screen and (max-width: 600px) {
+            .card {
+              width: 100%;
+            }
+          }
+        .card{
+            background-color:hsla(0, 31%, 89%, 0.959);
+            text-align: justify;
+            border-radius: 75px;
+        }
+
+        .card-img-top{
+            background-color: #ffffff;
+        }
+
+        .card-footer{
+            text-align: center;
+        }
+        .btn.btn-social-icon {
+            width: 50px;
+            height: 50px;
+            padding: 0
+        }
+        .btn.btn-rounded {
+            border-radius: 50px
+        }
+       
+        .btn-outline-facebook {
+            border: 1px solid #3b579d;
+            color: #3b579d
+        }
+        .btn-outline-facebook:hover {
+            background: #3b579d;
+            color: #ffffff
+        }
+        .btn-facebook {
+            background: #3b579d;
+            color: #ffffff
+        }
+        .btn-outline-twitter {
+            border: 1px solid #2caae1;
+            color: #2caae1
+        }
+        .btn-outline-twitter:hover {
+            background: #2caae1;
+            color: #ffffff
+        }
+       
+        .btn-twitter {
+            background: #2caae1;
+            color: #ffffff
+        }
+        .btn-outline-linkedin:hover {
+            background: #0177b5;
+            color: #ffffff
+        }
+        .btn-outline-linkedin {
+            border: 1px solid #0177b5;
+            color: #0177b5
+        }
+        .btn-linkedin {
+            background: #0177b5;
+            color: #ffffff
+        }
+        
+       
+       
+       
+          
+    </style>
+</head>
+<body>
+    <div class="text-center"><h1>About Us</h1></div>
+    <div class="text-center card-deck">        
+        <div class="card">
+          <img class="card-img-top" src="{% static 'img/shivam.png' %}" alt="Card image cap" >
+          <div class="card-body">
+            <h5 class="card-title">Shivam Bunge</h5>
+            <p class="card-text">Fullstack Web developer with skills in Html, Css, Javascript, Bootstrap and Django. Currently pursuing engineering from Pune Institute of Computer Technology.</p>
+          </div>
+          <div class="card-footer">
+            <a href="https://shivambunge.github.io/" target="_blank"><small class="text-muted"><button type="button" class="btn btn-social-icon btn-facebook btn-rounded"><i class="fa fa-facebook"></i></button> 
+            </small></a>
+            <a href="https://mobile.twitter.com/Leetcodr" target="_blank"><small class="text-muted"><button type="button" class="btn btn-social-icon btn-twitter btn-rounded"><i class="fa fa-twitter"></i></button> 
+            </small></a>
+            <a href="https://www.linkedin.com/in/shivam-bunge-9526141a0" target="_blank"><small class="text-muted"><button type="button" class="btn btn-social-icon btn-linkedin btn-rounded"><i class="fa fa-linkedin"></i></button> 
+            </small></a>
+           
+        </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img-top" src="{% static 'img/atharva.png' %}" alt="Card image cap" >
+          <div class="card-body">
+            <h5 class="card-title">Atharva Borawake</h5>
+            <p class="card-text">Fullstack Web developer with skills in Html, Css, Javascript, Bootstrap and Django. Currently pursuing engineering from Pune Institute of Computer Technology.</p>
+          </div>
+          <div class="card-footer">
+            <a href="https://www.instagram.com/illusion_asb/" target="_blank"><small class="text-muted"><button type="button" class="btn btn-social-icon btn-facebook btn-rounded"><i class="fa fa-instagram"></i></button> 
+            </small></a>
+            <a href="https://twitter.com/Atharva1512" target="_blank"><small class="text-muted"><button type="button" class="btn btn-social-icon btn-twitter btn-rounded"><i class="fa fa-twitter"></i></button> 
+            </small></a>
+            <a href="https://www.linkedin.com/in/atharva-borawake-1b34b61ab" target="_blank"><small class="text-muted"><button type="button" class="btn btn-social-icon btn-linkedin btn-rounded"><i class="fa fa-linkedin"></i></button> 
+            </small></a>
+           
+        </div>
+        <!-- <div class="template-demo"> 
+            <button type="button" class="btn btn-social-icon btn-facebook btn-rounded"><i class="fa fa-facebook"></i></button> 
+      </div> -->
+    </div>
+    </div>
+</body>
+</html>
